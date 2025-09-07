@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지 - 글로벌 크루즈 해커톤</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>관리자 페이지</h1>
+            <p>글로벌 크루즈 해커톤 신청 관리</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">메인 페이지로</a></li>
+                <li><a href="#" onclick="location.reload()">새로고침</a></li>
+                <li><a href="#" onclick="exportToCSV()">CSV 내보내기</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="admin-section">
+            <div class="admin-login" id="adminLogin">
+                <h2>관리자 로그인</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="관리자 비밀번호 입력">
+                    </div>
+                    <button type="submit" class="submit-btn">로그인</button>
+                </form>
+                <p class="login-hint">기본 비밀번호: admin1234</p>
+            </div>
+
+            <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>신청 현황</h2>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">전체 신청자</span>
+                            <span class="stat-value" id="totalCount">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">영상 제출</span>
+                            <span class="stat-value" id="videoCount">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <input type="text" id="searchInput" placeholder="학번 또는 이름으로 검색..." class="search-input">
+                    <button onclick="clearSearch()" class="clear-btn">초기화</button>
+                </div>
+
+                <div class="applications-table">
+                    <table id="applicationsTable">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>학번</th>
+                                <th>이름</th>
+                                <th>PPT 파일</th>
+                                <th>영상 파일</th>
+                                <th>신청일시</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicationsBody">
+                            <!-- 신청 데이터가 여기에 표시됩니다 -->
+                        </tbody>
+                    </table>
+                    
+                    <div id="noDataMessage" class="no-data" style="display: none;">
+                        신청 데이터가 없습니다.
+                    </div>
+                </div>
+
+                <div class="admin-actions">
+                    <button onclick="if(confirm('모든 신청 데이터를 삭제하시겠습니까?')) clearAllData()" class="danger-btn">전체 삭제</button>
+                    <button onclick="logout()" class="logout-btn">로그아웃</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 글로벌 크루즈 해커톤 - 관리자 페이지</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
