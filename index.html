@@ -26,7 +26,6 @@
                 <li><a href="#evaluation">평가</a></li>
                 <li><a href="#schedule">일정</a></li>
                 <li><a href="#downloads">자료실</a></li>
-                <li><a href="#apply">신청하기</a></li>
             </ul>
         </div>
     </nav>
@@ -103,6 +102,31 @@
                 <div class="contact-info">
                     <p><strong>이메일:</strong> kki@jejunu.ac.kr</p>
                     <p><strong>담당:</strong> 해양산업경찰학과 김광일 교수</p>
+                </div>
+                
+                <div class="email-submission">
+                    <h3>📧 경진대회 신청 안내</h3>
+                    <div class="submission-guide">
+                        <p><strong>신청 방법:</strong> 아래 내용을 포함하여 이메일로 제출</p>
+                        <ul>
+                            <li>학번</li>
+                            <li>이름</li>
+                            <li>소속 학과</li>
+                            <li>연락처</li>
+                            <li>아이디어 PPT 파일 첨부 (필수)</li>
+                            <li>발표 영상 파일 첨부 (선택, 가점)</li>
+                        </ul>
+                        
+                        <div class="email-template">
+                            <h4>이메일 제목 양식</h4>
+                            <p class="template-text">[글로벌 크루즈 해커톤] 학번_이름 신청</p>
+                            <small>예시: [글로벌 크루즈 해커톤] 20230001_홍길동 신청</small>
+                        </div>
+                        
+                        <a href="mailto:kki@jejunu.ac.kr?subject=[글로벌 크루즈 해커톤] 학번_이름 신청&body=안녕하세요.%0D%0A글로벌 크루즈 해커톤 아이디어 경진대회에 참가 신청합니다.%0D%0A%0D%0A■ 신청자 정보%0D%0A- 학번: %0D%0A- 이름: %0D%0A- 소속 학과: %0D%0A- 연락처: %0D%0A%0D%0A■ 첨부 파일%0D%0A- 아이디어 PPT: %0D%0A- 발표 영상(선택): %0D%0A%0D%0A감사합니다." class="email-btn">
+                            이메일로 신청하기
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -213,44 +237,6 @@
             </div>
         </section>
 
-        <section id="apply" class="section">
-            <h2>경진대회 신청</h2>
-            <div class="content-box">
-                <h3>참가 신청서 작성</h3>
-                <p>아래 양식을 작성하여 경진대회에 참가 신청해주세요.</p>
-                
-                <form id="applicationForm" class="application-form">
-                    <div class="form-group">
-                        <label for="studentId">학번 *</label>
-                        <input type="text" id="studentId" name="studentId" required placeholder="예: 20230001">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="name">이름 *</label>
-                        <input type="text" id="name" name="name" required placeholder="홍길동">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pptFile">PPT 파일 업로드 *</label>
-                        <input type="file" id="pptFile" name="pptFile" accept=".ppt,.pptx" required>
-                        <small>※ PPT 파일만 업로드 가능 (최대 50MB)</small>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="videoFile">발표 영상 업로드 (선택)</label>
-                        <input type="file" id="videoFile" name="videoFile" accept="video/*">
-                        <small>※ 가점 부여 항목 (최대 200MB)</small>
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button type="submit" class="submit-btn">신청서 제출</button>
-                        <button type="reset" class="reset-btn">초기화</button>
-                    </div>
-                </form>
-                
-                <div id="submitMessage" class="submit-message" style="display: none;"></div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -259,6 +245,5 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
 </body>
 </html>

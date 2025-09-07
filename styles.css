@@ -598,3 +598,74 @@ footer {
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
+
+/* Email Submission Styles */
+.email-submission {
+    margin-top: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 15px;
+    border: 2px solid #e9ecef;
+}
+
+.email-submission h3 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.submission-guide {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.submission-guide ul {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #2a5298;
+}
+
+.email-template {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #ffc107;
+}
+
+.email-template h4 {
+    color: #856404;
+    margin-bottom: 10px;
+}
+
+.template-text {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    color: #1e3c72;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.email-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    margin-top: 20px;
+}
+
+.email-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    color: white;
+    text-decoration: none;
+}
